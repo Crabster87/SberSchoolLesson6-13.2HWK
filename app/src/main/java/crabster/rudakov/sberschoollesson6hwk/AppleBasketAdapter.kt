@@ -4,6 +4,10 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import crabster.rudakov.sberschoollesson6hwk.data.Apple
+import crabster.rudakov.sberschoollesson6hwk.data.Basket
+import crabster.rudakov.sberschoollesson6hwk.data.Elements
+import crabster.rudakov.sberschoollesson6hwk.data.Summary
 import crabster.rudakov.sberschoollesson6hwk.holders.AppleHolder
 import crabster.rudakov.sberschoollesson6hwk.holders.BasketHolder
 import crabster.rudakov.sberschoollesson6hwk.holders.Holder

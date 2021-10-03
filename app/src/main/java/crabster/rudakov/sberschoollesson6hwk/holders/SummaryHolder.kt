@@ -3,7 +3,7 @@ package crabster.rudakov.sberschoollesson6hwk.holders
 import android.view.View
 import android.widget.TextView
 import crabster.rudakov.sberschoollesson6hwk.R
-import crabster.rudakov.sberschoollesson6hwk.Summary
+import crabster.rudakov.sberschoollesson6hwk.data.Summary
 
 /**
  * Адаптер для View "Итоги".

@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">SberSchoolLesson6HWK</string>
+    <string name="unlimit_creating_message">It is harmful to eat more than three apples! It\'s bad for your health!!!</string>
+    <string name="unlimit_moving_message">This basket is full of apples yet!!!</string>
 </resources>

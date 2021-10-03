@@ -2,13 +2,15 @@ package crabster.rudakov.sberschoollesson6hwk.holders
 
 import android.annotation.SuppressLint
 import android.content.Context
-import android.view.Gravity
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
-import android.widget.Toast
 import crabster.rudakov.sberschoollesson6hwk.*
+import crabster.rudakov.sberschoollesson6hwk.InteractiveHelper.Companion.makeToastMessage
+import crabster.rudakov.sberschoollesson6hwk.data.Apple
+import crabster.rudakov.sberschoollesson6hwk.data.Basket
 import crabster.rudakov.sberschoollesson6hwk.data.Baskets
+import crabster.rudakov.sberschoollesson6hwk.data.Summary
 
 /**
  * Адаптер для View "Корзина".
@@ -40,18 +42,13 @@ class BasketHolder(itemView: View, private val context: Context) : Holder(itemVi
             Baskets.baskets[layoutPosition + 2] is Apple &&
             Baskets.baskets[layoutPosition + 3] is Apple
         ) {
-            val toast = Toast.makeText(
-                context,
-                "It is harmful to eat more than three apples! It's bad for your health!!!",
-                Toast.LENGTH_SHORT
-            )
-            toast.setGravity(Gravity.BOTTOM, 0, 0)
-            toast.show()
+            makeToastMessage(context, R.string.unlimit_creating_message)
         } else {
             Baskets.baskets.add(layoutPosition + 1, Apple())
             val summary: Summary = Baskets.baskets[Baskets.baskets.size - 1] as Summary
             summary.countOfApples++
-            adapter.notifyDataSetChanged()
+            adapter.notifyItemInserted(layoutPosition + 1)
+            adapter.notifyItemChanged(Baskets.baskets.size - 1)
         }
     }
 

@@ -1,4 +1,4 @@
-package crabster.rudakov.sberschoollesson6hwk
+package crabster.rudakov.sberschoollesson6hwk.data
 
 /**
 * Общий интерфейс для возможных View.
